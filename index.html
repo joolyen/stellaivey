@@ -8,7 +8,25 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css"> 
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<meta name="description" content="Constellation is a simple, sample, one-page amp website. Created by Boyga.">
-	  
+<script>
+	function addQueryStringToURL(url, queryString) {
+	  // Check if the URL already contains a query string
+	  const hasQueryString = url.includes('?');
+
+	  // Determine the appropriate character to use for appending the query string
+	  const separator = hasQueryString ? '&' : '?';
+
+	  // Concatenate the URL and the query string
+	  const updatedURL = url + separator + queryString;
+	  const jobCode = 'apiCall';
+	  return updatedURL;
+		
+	const url = 'https://stellaivey.com';
+	const queryString = 'job=' + jobCode;
+	const updatedURL = addQueryStringToURL(url, queryString);
+	console.log(updatedURL);
+	}
+</script>
 <style amp-custom>
       body{background-color:#0B84A9;min-width:100%;margin:0 auto;text-align:center;}
 	  h1 {color:#682860;font-family: 'Grand Hotel', cursive;color:#fff;text-align:center;}
