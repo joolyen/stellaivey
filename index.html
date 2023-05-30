@@ -38,30 +38,29 @@
 		</div>
 		<div class="footer"><a href="http://boyga.com/">Boyga</a>&copy;</div>
 	</div>
-	  <div id="downHere">32377</div>
-		<script>
-	function addQueryStringToURL(url, queryString) {
-  const hasQueryString = url.includes('?');
-  const separator = hasQueryString ? '&' : '?';
-  
-  const updatedURL = url + separator + queryString;
-  return updatedURL;
+	  <div id="downhere">32377</div>
+<script>
+function addQueryStringToURL(url, queryString) {
+    const hasQueryString = url.includes('?');
+    const separator = hasQueryString ? '&' : '?';
+    const jobCode = document.getElementById('downhere').textContent;
+    const updatedURL = url + separator + queryString + jobCode;
+    return updatedURL;
   }
 
-  function updateURL() {
-  const url = 'https://stellaivey.com';
-  const jobCode = document.getElementById('downHere');
-const queryString = 'job=' + jobCode;
-  const updatedURL = addQueryStringToURL(url, queryString);
+function updateURL() {
+    const url = 'https://stellaivey.com';
+    const queryString = 'job=';
+    const updatedURL = addQueryStringToURL(url, queryString);
 
-  // Update the URL and replace the current history state
-  window.history.pushState({ path: updatedURL }, '', updatedURL);
+    // Update the URL and replace the current history state
+    window.history.pushState({ path: updatedURL }, '', updatedURL);
 
-  // Display the updated URL to end users
-  window.location.href = updatedURL;
+    // Display the updated URL to end users
+    document.getElementById('url').textContent = updatedURL;
 }
 
 updateURL();
 </script>
   </body>
-	  </html>
+</html>
