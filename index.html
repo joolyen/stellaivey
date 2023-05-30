@@ -10,22 +10,25 @@
 	<meta name="description" content="Constellation is a simple, sample, one-page amp website. Created by Boyga.">
 <script>
 	function addQueryStringToURL(url, queryString) {
-	  // Check if the URL already contains a query string
-	  const hasQueryString = url.includes('?');
+  const hasQueryString = url.includes('?');
+  const separator = hasQueryString ? '&' : '?';
+  const updatedURL = url + separator + queryString;
+  return updatedURL;
+}
 
-	  // Determine the appropriate character to use for appending the query string
-	  const separator = hasQueryString ? '&' : '?';
+function updateURL() {
+  const url = 'https://example.com';
+  const queryString = 'param1=value1&param2=value2';
+  const updatedURL = addQueryStringToURL(url, queryString);
 
-	  // Concatenate the URL and the query string
-	  const updatedURL = url + separator + queryString;
+  // Update the URL and replace the current history state
+  window.history.pushState({ path: updatedURL }, '', updatedURL);
 
-	  return updatedURL;
-	}
-	
-	const url = 'https://stellaivey.com';
-	const queryString = 'job=';
-	const updatedURL = addQueryStringToURL(url, queryString);
-	console.log(updatedURL);
+  // Display the updated URL to end users
+  document.getElementById('url').textContent = updatedURL;
+}
+
+updateURL();
 </script>
 <style amp-custom>
       body{background-color:#0B84A9;min-width:100%;margin:0 auto;text-align:center;}
