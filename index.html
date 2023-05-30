@@ -9,21 +9,21 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<meta name="description" content="Constellation is a simple, sample, one-page amp website. Created by Boyga.">
 <script>
-	function addQueryStringToURL(url, queryString) {
+	function addQueryStringToURL(url2, queryString) {
 	  // Check if the URL already contains a query string
-	  const hasQueryString = url.includes('?');
+	  const hasQueryString = url2.includes('?');
 
 	  // Determine the appropriate character to use for appending the query string
 	  const separator = hasQueryString ? '&' : '?';
 
 	  // Concatenate the URL and the query string
-	  const updatedURL = url + separator + queryString;
+	  const updatedURL = url2 + separator + queryString;
 
 	  return updatedURL;
 		
-	const url = 'https://stellaivey.com';
+	const url2 = 'https://stellaivey.com';
 	const queryString = 'job=';
-	const updatedURL = addQueryStringToURL(url, queryString);
+	const updatedURL = addQueryStringToURL(url2, queryString);
 	console.log(updatedURL);
 	}
 </script>
