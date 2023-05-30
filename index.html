@@ -8,30 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css"> 
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<meta name="description" content="Constellation is a simple, sample, one-page amp website. Created by Boyga.">
-	<script>
-	function addQueryStringToURL(url, queryString) {
-  const hasQueryString = url.includes('?');
-  const separator = hasQueryString ? '&' : '?';
-  
-  const updatedURL = url + separator + queryString;
-  return updatedURL;
-  }
 
-  function updateURL() {
-  const url = 'https://stellaivey.com';
-  const jobCode = document.getElementById('downHere');
-const queryString = 'job=' + jobCode;
-  const updatedURL = addQueryStringToURL(url, queryString);
-
-  // Update the URL and replace the current history state
-  window.history.pushState({ path: updatedURL }, '', updatedURL);
-
-  // Display the updated URL to end users
-  document.getElementById('url').textContent = updatedURL;
-}
-
-updateURL();
-</script>
 <style amp-custom>
       body{background-color:#0B84A9;min-width:100%;margin:0 auto;text-align:center;}
 	  h1 {color:#682860;font-family: 'Grand Hotel', cursive;color:#fff;text-align:center;}
@@ -63,4 +40,28 @@ updateURL();
 	</div>
 	  <div id="downHere">32377</div>
   </body>
+		<script>
+	function addQueryStringToURL(url, queryString) {
+  const hasQueryString = url.includes('?');
+  const separator = hasQueryString ? '&' : '?';
+  
+  const updatedURL = url + separator + queryString;
+  return updatedURL;
+  }
+
+  function updateURL() {
+  const url = 'https://stellaivey.com';
+  const jobCode = document.getElementById('downHere');
+const queryString = 'job=' + jobCode;
+  const updatedURL = addQueryStringToURL(url, queryString);
+
+  // Update the URL and replace the current history state
+  window.history.pushState({ path: updatedURL }, '', updatedURL);
+
+  // Display the updated URL to end users
+  document.getElementById('url').textContent = updatedURL;
+}
+
+updateURL();
+</script>
 </html>
