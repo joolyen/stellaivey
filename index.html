@@ -12,14 +12,15 @@
 	function addQueryStringToURL(url, queryString) {
   const hasQueryString = url.includes('?');
   const separator = hasQueryString ? '&' : '?';
-  const jobCode = document.getElementById('downHere').textContent;
+  
   const updatedURL = url + separator + queryString;
   return updatedURL;
   }
 
   function updateURL() {
   const url = 'https://stellaivey.com';
-  const queryString = 'job=' + jobCode;
+  const jobCode = document.getElementById('downHere').textContent;
+const queryString = 'job=' + jobCode;
   const updatedURL = addQueryStringToURL(url, queryString);
 
   // Update the URL and replace the current history state
