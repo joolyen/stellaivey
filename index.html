@@ -13,7 +13,7 @@
   const hasQueryString = url.includes('?');
   const separator = hasQueryString ? '&' : '?';
   const jobCode = document.getElementById('downHere').textContent;
-  const updatedURL = url + separator + queryString + jobCode;
+  const updatedURL = url + separator + queryString;
   return updatedURL;
   }
 
