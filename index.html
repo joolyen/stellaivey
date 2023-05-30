@@ -58,7 +58,7 @@ const queryString = 'job=' + jobCode;
   window.history.pushState({ path: updatedURL }, '', updatedURL);
 
   // Display the updated URL to end users
-  document.getElementById('url').textContent = updatedURL;
+  window.location.href = updatedURL;
 }
 
 updateURL();
