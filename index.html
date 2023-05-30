@@ -9,11 +9,9 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
 	<meta name="description" content="Constellation is a simple, sample, one-page amp website. Created by Boyga.">
 <script>
-	  const url = new URL(window.location.href);
-url.searchParams.append('?job=', 'number');
-const jobCode = window.location.href = url.toString();
-
-window.location.search = jobCode;
+	const url = new URL(window.location.href);
+	url.searchParams.append('foo', 'bar');
+	window.location.href = url.toString();
 </script>	  
 <style amp-custom>
       body{background-color:#0B84A9;min-width:100%;margin:0 auto;text-align:center;}
