@@ -40,14 +40,16 @@
 	</div>
 	  <div id="downhere">32377</div>
 <script>
+const jobCode = document.getElementById('downhere').textContent;
+	
 function addQueryStringToURL(url, queryString) {
     const hasQueryString = url.includes('?');
     const separator = hasQueryString ? '&' : '?';
-    const jobCode = document.getElementById('downhere').textContent;
     const updatedURL = url + separator + queryString + jobCode;
     return updatedURL;
   }
 
+	
 function updateURL() {
     const url = 'https://stellaivey.com';
     const queryString = 'job=';
